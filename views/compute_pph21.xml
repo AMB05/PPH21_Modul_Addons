@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_hr_payslip_form_inherit" model="ir.ui.view">
+        <field name="name">hr.payslip.form.inherit</field>
+        <field name="model">hr.payslip</field>
+        <field name="inherit_id" ref="hr_payroll.view_hr_payslip_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header/button[@name='action_payslip_cancel']" position="before"> 
+                <button
+                    name="compute_pph21"
+                    string="COMPUTE PPH21"
+                    type="object"
+                    attrs="{'invisible': ['|', ('state', '!=', 'verify'), ('credit_note', '=', True)]}"
+                    help="Compute PPh21 for the tax calculation" 
+                />
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

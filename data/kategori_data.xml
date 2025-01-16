@@ -1,0 +1,13 @@
+<odoo>
+    <record id="kategori_a" model="pph21.kategori">
+        <field name="name">Kategori A</field>
+    </record>
+
+    <record id="kategori_b" model="pph21.kategori">
+        <field name="name">Kategori B</field>
+    </record>
+
+    <record id="kategori_c" model="pph21.kategori">
+        <field name="name">Kategori C</field>
+    </record>
+</odoo>

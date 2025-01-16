@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_pph21_tarif_tree" model="ir.ui.view">
+        <field name="name">pph21.tarif.tree</field>
+        <field name="model">pph21.tarif</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <!-- <field name="sequence" widget="handle" string="Order"/> -->
+                <field name="kategori_id"/>
+                <field name="penghasilan_mulai"/>
+                <field name="penghasilan_sampai"/>
+                <field name="tarif_efektif"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_pph21_tarif_form" model="ir.ui.view">
+        <field name="name">pph21.tarif.form</field>
+        <field name="model">pph21.tarif</field>
+        <field name="arch" type="xml">
+            <form string="Tarif Pajak Efektif">
+                <sheet>
+                    <group>
+                        <field name="sequence"/>
+                        <field name="kategori_id"/>
+                        <field name="penghasilan_mulai"/>
+                        <field name="penghasilan_sampai"/>
+                        <field name="tarif_efektif"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <!-- Tarif Efektif -->
+    <record id="action_pph21_tarif" model="ir.actions.act_window">
+        <field name="name">Tarif Pajak Efektif</field>
+        <field name="res_model">pph21.tarif</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_pph21_tarif_root" name="PPh21" sequence="10"/>
+    <menuitem id="menu_pph21_tarif"
+              name="Tarif Pajak Efektif"
+              parent="menu_pph21_configuration"
+              action="action_pph21_tarif" />
+</odoo>

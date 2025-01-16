@@ -1,0 +1,33 @@
+<odoo>
+    <record id="status_tk_0" model="pph21.status">
+        <field name="name">TK/0</field>
+    </record>
+
+    <record id="status_tk_1" model="pph21.status">
+        <field name="name">TK/1</field>
+    </record>
+
+    <record id="status_tk_2" model="pph21.status">
+        <field name="name">TK/2</field>
+    </record>
+
+    <record id="status_tk_3" model="pph21.status">
+        <field name="name">TK/3</field>
+    </record>
+
+    <record id="status_k_0" model="pph21.status">
+        <field name="name">K/0</field>
+    </record>
+
+    <record id="status_k_1" model="pph21.status">
+        <field name="name">K/1</field>
+    </record>
+
+    <record id="status_k_2" model="pph21.status">
+        <field name="name">K/2</field>
+    </record>
+
+    <record id="status_k_3" model="pph21.status">
+        <field name="name">K/3</field>
+    </record>
+</odoo>

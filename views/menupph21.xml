@@ -1,0 +1,10 @@
+<odoo>
+    <!-- Menu PPH21 -->
+    <menuitem id="menu_pph21_configuration"
+              name="PPh21"
+              parent="hr_work_entry_contract_enterprise.menu_hr_payroll_configuration"
+              sequence="120" 
+              groups="hr_payroll.group_hr_payroll_manager"/>
+
+    
+</odoo>

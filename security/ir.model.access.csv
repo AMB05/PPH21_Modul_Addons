@@ -1,0 +1,9 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_pph21_ptkp,access_pph21_ptkp,model_pph21_ptkp,hr_payroll.group_hr_payroll_manager,1,1,1,1
+access_pph21_tarif,access_pph21_tarif,model_pph21_tarif,hr_payroll.group_hr_payroll_manager,1,1,1,1
+access_pph21_tax,access_pph21_tax,model_pph21_tax,hr_payroll.group_hr_payroll_manager,1,1,1,1
+access_pph21_kategori,access_pph21_kategori,model_pph21_kategori,base.group_user,1,1,1,1
+access_pph21_status,access_pph21_status,model_pph21_status,base.group_user,1,1,1,1
+access_pph21_annual,access_pph21_annual,model_pph21_annual,base.group_user,1,1,1,1
+access_pph21_monthly_net_salary_user,access_pph21_monthly_net_salary_user,pph21_module.model_pph21_annual_monthly,base.group_user,1,1,1,1
+access_pph21_monthly_net_salary_manager,access_pph21_monthly_net_salary_manager,pph21_module.model_pph21_annual_monthly,base.group_system,1,1,1,1

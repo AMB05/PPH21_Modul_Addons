@@ -1,0 +1,89 @@
+<odoo>
+    <record id="view_pph21_annual_form" model="ir.ui.view">
+        <field name="name">pph21.annual.form</field>
+        <field name="model">pph21.annual</field>
+        <field name="arch" type="xml">
+            <form string="PPH21 Annual">
+                <sheet>
+                    <group>
+                        <field name="employee_id" options="{'no_create': True}"/>
+                        <field name="npwp" readonly="1"/>
+                        <field name="status_id" readonly="1"/>
+                        <field name="ptkp_kategori" readonly="1" />
+                        <field name="total_gross_salary" readonly="1"/>
+                        <field name="total_premi_jkk" readonly="1"/>
+                        <field name="total_premi_jkm" readonly="1"/>
+                        <field name="total_premi_kes" readonly="1"/>
+                        <field name="months_worked" readonly="1"/>
+                        <field name="job_expense" readonly="1"/>
+                        <field name="total_premi_jp" readonly="1"/>
+                        <field name="total_premi_jht" readonly="1"/>
+                        <field name="adjusted_salary" readonly="1"/>
+                        <field name="prev_net_income"/>
+                        <field name="annual_net_income" readonly="1"/>
+                        <field name="ptkp_amount" readonly="1"/>
+                        <field name="taxable_income" readonly="1"/>
+                        <field name="annual_tax" readonly="1"/>
+                        <field name="total_monthly_pph21" readonly="1"/>
+                        <field name="prev_period_pph21_paid"/>
+                        <field name="pph21_dipotong_desember" readonly="1"/>
+                    </group>
+<!--                     <group string="Detail Perhitungan">
+                        <field name="annual_tax_details" readonly="1" nolabel="1"/>
+                    </group> -->
+                    <notebook>
+                       <page string="Monthly Salaries">
+                            <field name="monthly_salary_ids" readonly="1">
+                                <tree>
+                                    <field name="month"/>
+                                    <field name="net_salary"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_pph21_annual_tree" model="ir.ui.view">
+        <field name="name">pph21.annual.tree</field>
+        <field name="model">pph21.annual</field>
+        <field name="arch" type="xml">
+            <tree string="PPH21 Annual">
+                <field name="employee_id" options="{'no_create': True}"/>
+                <field name="npwp" readonly="1"/>
+                <field name="status_id" readonly="1"/>
+                <field name="ptkp_kategori" readonly="1" />
+                <!-- <field name="total_gross_salary" readonly="1"/>
+                <field name="total_premi_jkk" readonly="1"/>
+                <field name="total_premi_jkm" readonly="1"/>
+                <field name="total_premi_kes" readonly="1"/>
+                <field name="months_worked" readonly="1"/>
+                <field name="job_expense" readonly="1"/>
+                <field name="adjusted_salary" readonly="1"/>
+                <field name="prev_net_income"/>
+                <field name="annual_net_income" readonly="1"/>
+                <field name="ptkp_amount" readonly="1"/>
+                <field name="taxable_income" readonly="1"/>
+                <field name="annual_tax" readonly="1"/>
+                <field name="total_monthly_pph21" readonly="1"/>
+                <field name="prev_period_pph21_paid"/>
+                <field name="pph21_dipotong_desember" readonly="1"/> -->
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_pph21_annual" model="ir.actions.act_window">
+        <field name="name">PPH21 Annual</field>
+        <field name="res_model">pph21.annual</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem
+        id="menu_hr_pph21_annual"
+        name="PPH21 Annual"
+        parent="hr_work_entry_contract_enterprise.menu_hr_payroll_root"
+        sequence="70"
+        action="action_pph21_annual"/>
+</odoo>

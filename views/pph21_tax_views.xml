@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_pph21_tax_tree" model="ir.ui.view">
+        <field name="name">pph21.tax.tree</field>
+        <field name="model">pph21.tax</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom">
+                <!-- <field name="sequence" widget="handle" string="Order"/> -->
+                <field name="pajak"/>
+                <field name="rentang_dari"/>
+                <field name="rentang_sampai"/>
+                <field name="rentang"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_pph21_tax_form" model="ir.ui.view">
+        <field name="name">pph21.tax.form</field>
+        <field name="model">pph21.tax</field>
+        <field name="arch" type="xml">
+            <form string="Pajak PPh21">
+                <sheet>
+                    <group>
+                        <field name="sequence"/>
+                        <field name="pajak"/>
+                        <field name="rentang_dari"/>
+                        <field name="rentang_sampai"/>
+                        <field name="rentang"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <!-- Pajak PPh21 -->
+    <record id="action_pph21_tax" model="ir.actions.act_window">
+        <field name="name">Pajak PPh21</field>
+        <field name="res_model">pph21.tax</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem id="menu_pph21_tarif_root" name="PPh21" sequence="10"/>
+    <menuitem id="menu_pph21_tax"
+              name="Pajak PPh21"
+              parent="menu_pph21_configuration"
+              action="action_pph21_tax" />
+
+</odoo>
